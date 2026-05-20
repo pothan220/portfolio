@@ -115,14 +115,21 @@ nav {
   background: var(--accent);
   color: #0a0a0f;
 }
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 3rem 5rem;
-  position: relative;
-  overflow: hidden;
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:
+    8rem
+    4rem
+    4rem;
+
+  position:relative;
+
+  overflow:hidden;
 }
 .hero-grid-bg {
   position: absolute;
