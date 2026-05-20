@@ -9,7 +9,7 @@ export default function Navbar() {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a className="nav-resume" href="/Pothan_CV.pdf" download="Pothan_Prathap_Puppala_CV.pdf">↓ Resume</a>
+      <a className="nav-resume" href="https://drive.google.com/uc?export=download&id=1nalEgSZzUwgXcpCYeop1lQAIlEw6fRHr" download="Pothan_Prathap_Puppala_CV.pdf">↓ Resume</a>
     </nav>
   );
 }
