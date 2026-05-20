@@ -3,7 +3,7 @@
 
 import { useState, useCallback } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { search, FALLBACK } from '@/lib/nlp-engine'
+import { nlpSearch, FALLBACK } from '@/lib/nlp-engine'
 import type { ChatMessage, VisitorType } from '@/types'
 
 // Visitor-type personalised greetings
@@ -80,11 +80,11 @@ export function useChat() {
 
     // Simulate a brief "thinking" moment (feels natural, also shows the typing indicator)
     setTimeout(() => {
-      const result = search(text)
+      const result = nlpSearch(text)
 
       if (result) {
-        addMessage('assistant', result.entry.answer)
-        setFollowUps(result.entry.followUps)
+        addMessage('assistant', result.answer)
+        setFollowUps(result.followUps)
       } else {
         addMessage('assistant', FALLBACK.answer)
         setFollowUps(FALLBACK.followUps)
