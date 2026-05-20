@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pothan Portfolio
 
 A clean dark Next.js portfolio with a local smart assistant.
@@ -18,3 +19,6 @@ Open: http://localhost:3000
 - Main styling is in `src/app/globals.css`.
 - Main page sections are split into neat components in `src/components`.
 - Add your CV as `public/Pothan_CV.pdf` if you want the resume download button to work.
+=======
+# portfolio
+>>>>>>> d3dd987a2eca807e6a1ce3a18e0a3d6e88b602bb
