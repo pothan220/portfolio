@@ -28,7 +28,7 @@ export default function Contact() {
     </a>
   </span>
 </li>
-          <li><span className="ci-label">Resume</span><span className="ci-value"><a href="/Pothan_CV.pdf" download="Pothan_Prathap_Puppala_CV.pdf">Pothan_Prathap_Puppala_CV.pdf</a></span></li>
+          <li><span className="ci-label">Resume</span><span className="ci-value"><a href="https://drive.google.com/uc?export=download&id=1nalEgSZzUwgXcpCYeop1lQAIlEw6fRHr" download="Pothan_Prathap_Puppala_CV.pdf">Pothan_Prathap_Puppala_CV.pdf</a></span></li>
        
        
         </ul>
