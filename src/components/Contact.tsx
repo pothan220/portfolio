@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="contact-section">
           <p>Whether you&apos;re looking for a full-stack engineer to join your team, want to collaborate on something interesting, or just want to talk code — I&apos;m open to it.</p>
           <a href="mailto:pothan220@gmail.com" className="btn btn-primary" style={{ marginRight: "0.75rem" }}>Send a message ↗</a>
-          <a href="https://drive.google.com/uc?export=download&id=1nalEgSZzUwgXcpCYeop1lQAIlEw6fRHr" className="btn btn-download">↓ Download CV</a>
+          <a href="https://drive.google.com/uc?export=download&id=1nalEgSZzUwgXcpCYeop1lQAIlEw6fRHr" download="Pothan_Prathap_Puppala_CV.pdf" className="btn btn-download">↓ Download CV</a>
         </div>
         <ul className="contact-info-list">
           <li><span className="ci-label">Email</span><span className="ci-value"><a href="mailto:pothan220@gmail.com">pothan220@gmail.com</a></span></li>
