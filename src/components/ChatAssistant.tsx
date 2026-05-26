@@ -8,7 +8,7 @@ type Message = { role: "bot" | "user"; text: string };
 const VISITOR_OPTIONS = ["I'm a recruiter / hiring", "I'm a fellow developer", "I'm a potential client", "Just exploring"];
 
 const GREETINGS = {
-  recruiter: `Great — highlighting the most relevant experience for you.\n\nPothan has **~3 years** full-stack experience, currently at **Nextech** (healthcare EHR) and previously **The Hut Group** (global e-commerce). He's open to new opportunities.\n\nWhat would you like to know first?`,
+  recruiter: `Great — highlighting the most relevant experience for you.\n\nPothan has **3 years** full-stack experience, currently at **Nextech** (healthcare EHR) and previously **The Hut Group** (global e-commerce). He's open to new opportunities.\n\nWhat would you like to know first?`,
   developer: `Fellow dev! Pothan works in **TypeScript, React, Node.js and AWS**.\n\nHe's also built **SentiMap** — an NLP research tool using TF-IDF + Sentence Transformers + NetworkX. No external AI APIs, all from scratch.\n\nWhat do you want to dig into?`,
   client: `Pothan specialises in **full-stack web apps** — from healthcare platforms to high-traffic e-commerce serving millions.\n\nComfortable from design all the way to production on AWS.\n\nWhat kind of project do you have in mind?`,
   other: `Happy to give you the full tour!\n\nPothan's a full-stack engineer with interesting projects across **healthcare tech**, **global e-commerce**, and **AI/NLP research**.\n\nWhat are you curious about?`,

@@ -6,31 +6,14 @@ import { v4 as uuidv4 } from 'uuid'
 import { nlpSearch, FALLBACK } from '@/lib/nlp-engine'
 import type { ChatMessage, VisitorType } from '@/types'
 
-// Visitor-type personalised greetings
 const GREETINGS: Record<VisitorType, string> = {
-  recruiter: `Great — I'll make sure to highlight the most relevant experience for you.
+  recruiter: `Great — highlighting the most relevant experience for you.\n\nPothan has **3 years** of full-stack experience, currently at **Nextech** (healthcare EHR) and previously **The Hut Group** (global e-commerce). He's open to new opportunities.\n\nWhat would you like to know first?`,
 
-Pothan has **~3 years** of full-stack experience. Currently at **Nextech** (Ophthalmology EHR) and previously at **The Hut Group** (Look Fantastic — global e-commerce). He's open to new opportunities.
+  developer: `Fellow dev! Pothan lives in **TypeScript, React, Node.js and AWS**.\n\nHe's also done some interesting ML/AI work — built **SentiMap**, an NLP research analysis tool using TF-IDF, Sentence Transformers and NetworkX. No external APIs, just clean applied ML.\n\nWhat do you want to dig into?`,
 
-What would you like to know first?`,
+  client: `Good to hear from you! Pothan specialises in **full-stack web applications** — from healthcare platforms to high-traffic e-commerce serving millions of users.\n\nHe's comfortable taking a project from design to production on AWS.\n\nWhat kind of project do you have in mind?`,
 
-  developer: `Fellow dev! Pothan lives in **TypeScript, React, Node.js and AWS**.
-
-He's also done some interesting ML/AI work — built **SentiMap**, an NLP research analysis tool using TF-IDF + Sentence Transformers + NetworkX. No external APIs, just clean applied ML.
-
-What do you want to dig into?`,
-
-  client: `Good to hear from you! Pothan specialises in **full-stack web applications** — from healthcare platforms to high-traffic e-commerce serving millions of users.
-
-He's comfortable taking a project from design to production on AWS.
-
-What kind of project do you have in mind?`,
-
-  other: `Happy to give you the full tour!
-
-Pothan's a full-stack engineer with some interesting projects across **healthcare tech**, **global e-commerce**, and **AI/NLP research**.
-
-What are you curious about?`,
+  other: `Happy to give you the full tour!\n\nPothan's a full-stack engineer with projects across **healthcare tech**, **global e-commerce**, and **AI/NLP research**.\n\nWhat are you curious about?`,
 }
 
 function toVisitorType(text: string): VisitorType {
@@ -50,13 +33,11 @@ export function useChat() {
     setMessages(prev => [...prev, { id: uuidv4(), role, content }])
   }, [])
 
-  // ── Visitor selects who they are ──
   const selectVisitorType = useCallback((text: string) => {
     const vType = toVisitorType(text)
     setVisitorType(vType)
     addMessage('user', text)
 
-    // Small delay — feels more natural than instant
     setIsThinking(true)
     setTimeout(() => {
       addMessage('assistant', GREETINGS[vType])
@@ -70,15 +51,13 @@ export function useChat() {
     }, 400)
   }, [addMessage])
 
-  // ── User sends a message → NLP engine processes it ──
   const sendMessage = useCallback((text: string) => {
     if (!text.trim() || isThinking) return
 
     addMessage('user', text)
     setFollowUps([])
     setIsThinking(true)
-
-    // Simulate a brief "thinking" moment (feels natural, also shows the typing indicator)
+    
     setTimeout(() => {
       const result = nlpSearch(text)
 

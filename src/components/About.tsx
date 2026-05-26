@@ -1,8 +1,3 @@
-const bars = [
-  ["TypeScript / JavaScript", 95], ["React / Next.js", 92], ["Node.js / Express", 90],
-  ["AWS (Lambda, API GW, EC2)", 82], ["MongoDB / MySQL", 85], ["Python / ML / NLP", 70]
-];
-
 export default function About() {
   return (
     <section id="about">
@@ -11,25 +6,17 @@ export default function About() {
       <div className="divider" />
       <div className="about-grid reveal">
         <div className="about-text">
-          <p>I&apos;m a <strong>Full-Stack Software Engineer</strong> with approximately 3 years of hands-on experience building scalable web applications across two highly demanding domains — <strong>healthcare technology</strong> and <strong>global e-commerce</strong>.</p>
-          <p>Proficient in <strong>TypeScript, JavaScript, React</strong> and <strong>Node.js</strong>, with solid exposure to AWS cloud infrastructure, RESTful API design and CI/CD pipelines. Comfortable working in fast-paced Agile teams and contributing to code quality through reviews and test-driven development.</p>
-          <p>Recently completed an <strong>MSc in Advanced Computer Science</strong> at the University of Leicester, expanding into AI, NLP, machine learning, and intelligent software systems alongside modern full-stack engineering practices.</p>
-          <ul className="contact-list">
-            <li><span className="contact-icon">✉</span><a href="mailto:pothanpuppala@gmail.com">pothan220@gmail.com</a></li>
-            <li><span className="contact-icon">✆</span><a href="tel:+447375916050">+44 7375 916050</a></li>
-            <li><span className="contact-icon">⚑</span><span>Leicester, UK</span></li>
-            <li><span className="contact-icon">↓</span><a href="https://drive.google.com/uc?export=download&id=1nalEgSZzUwgXcpCYeop1lQAIlEw6fRHr" download="Pothan_Prathap_Puppala_CV.pdf">Download Resume (PDF)</a></li>
-            <li><span className="contact-icon">in</span><a href="https://www.linkedin.com/in/prathap220/"target="_blank" rel="noopener noreferrer">linkedin.com/in/prathap220</a></li>
-          </ul>
+          <p>I&apos;ve shipped production software for clinical workflows used by real healthcare teams — and I know the difference between code that works and code that holds up.</p>
+          <p>I&apos;m a <strong>Full-Stack Software Engineer</strong> with 3 years of experience across <strong>healthcare technology</strong> and <strong>global e-commerce</strong>. My day-to-day is React, TypeScript, Node.js, MongoDB and AWS — building backend systems and frontend experiences that don&apos;t fall over when real users hit them.</p>
+          <p>At Nextech Systems I work on production healthcare applications where slow or broken isn&apos;t an option. Before that I built and maintained e-commerce platforms serving millions of users across 100+ international sites. I recently completed an <strong>MSc in Advanced Computer Science</strong> at the University of Leicester, which pushed me deep into AI, NLP and machine learning on top of my engineering foundations.</p>
+          <p>What I actually enjoy: picking apart a messy codebase, finding where the performance dies, and fixing it properly. Building APIs other developers find a pleasure to work with. Shipping things that matter to the people using them.</p>
+          
         </div>
         <div className="about-right">
           <div className="section-label">// Core proficiency</div>
-          <div className="skill-bar-wrap">
-            {bars.map(([label, value]) => (
-              <div className="skill-bar-item" key={label as string}>
-                <div className="skill-bar-label"><span>{label}</span><span>{value}%</span></div>
-                <div className="skill-bar-track"><div className="skill-bar-fill" data-width={value} /></div>
-              </div>
+          <div className="skill-tags" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "1rem" }}>
+            {["TypeScript", "JavaScript", "React", "Next.js", "Node.js", "Express.js", "AWS Lambda", "API Gateway", "MongoDB", "MySQL", "PostgreSQL", "Docker", "GitHub Actions", "CI/CD", "REST APIs", "Python", "NLP", "TDD"].map((tag, i) => (
+              <span className={`tag ${i < 4 ? "accent" : ""}`} key={tag}>{tag}</span>
             ))}
           </div>
         </div>

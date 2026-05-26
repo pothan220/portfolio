@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-glow2" />
       <div className="hero-tag">Senior Software Engineer · Leicester, UK</div>
       <h1>Pothan<br /><span>Prathap</span><br />Puppala.</h1>
-      <p className="hero-sub">Building scalable full-stack systems — from Ophthalmology EHR platforms to global e-commerce serving millions. ~3 years shipping production code in TypeScript, React, and AWS.</p>
+      <p className="hero-sub">Building scalable full-stack systems — from Ophthalmology EHR platforms to global e-commerce serving millions. 3 years shipping production code in TypeScript, React, and AWS.</p>
       <div className="hero-cta">
         <a href="#experience" className="btn btn-primary">View Work ↓</a>
         <a href="#contact" className="btn btn-ghost">Get in touch</a>
