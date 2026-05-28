@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="hero-grid-bg" />
       <div className="hero-glow" />
       <div className="hero-glow2" />
-      <div className="hero-tag">Software Engineer · Leicester, UK</div>
+      <div className="hero-tag">Software Engineer  · Leicester, UK</div>
       <h1>Pothan<br /><span>Prathap</span><br />Puppala.</h1>
       <p className="hero-sub">Building scalable full-stack systems — from Ophthalmology EHR platforms to global e-commerce serving millions. 3 years shipping production code in TypeScript, React, and AWS.</p>
       <div className="hero-cta">
