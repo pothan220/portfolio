@@ -7,7 +7,7 @@ export default function Experience() {
       <div className="exp-timeline">
         <div className="exp-item reveal">
           <div className="exp-dot" />
-          <div className="exp-date">Aug 2025 – Present</div>
+          <div className="exp-date">Jul 2025 – Present</div>
           <div className="exp-title">Full-Stack Developer</div>
           <div className="exp-company">Nextech · Ophthalmology EHR Platform</div>
           <div className="exp-tags">{["React","TypeScript","Node.js","AWS Lambda","MongoDB","Agile"].map(t => <span className="exp-tag" key={t}>{t}</span>)}</div>
@@ -22,7 +22,7 @@ export default function Experience() {
         </div>
         <div className="exp-item reveal">
           <div className="exp-dot exp-dot-blue" />
-          <div className="exp-date">March 2022 – October 2023</div>
+          <div className="exp-date">March 2022 – November 2023</div>
           <div className="exp-title">Full-Stack Developer</div>
           <div className="exp-company">Banana Apps Ltd · Client: The Hut Group (Look Fantastic)</div>
           <div className="exp-tags">{["React","Node.js","MongoDB","AWS","GitHub Actions","E-commerce"].map(t => <span className="exp-tag" key={t}>{t}</span>)}</div>
